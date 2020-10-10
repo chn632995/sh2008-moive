@@ -9,6 +9,7 @@ import {
 
 // 请求正在热映列表数据
 export const nowPlayingListData = (pageNum) => {
+    http.defaults.headers.info = "";
     return http.get(nowPlayingListUri + pageNum);
 };
 
