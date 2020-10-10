@@ -5,4 +5,7 @@ export const nowPlayingListUri =
 export const comingSoonListUri =
     "gateway?cityId=110100&pageSize=10&type=2&k=7957247&pageNum=";
 
+// 电影详情数据
+export const moiveDetailUrl = "gateway?k=5950600&filmId=";
+
 // 后续有其他地址请求届时再加
