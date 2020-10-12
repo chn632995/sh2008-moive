@@ -23,6 +23,12 @@ Vue.config.productionTip = false
 //     "gateway?cityId=110100&pageNum=1&pageSize=10&type=1&k=8632456"
 // );
 
+// 使用懒加载
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad, {
+    loading: "https://2url.cc/1OwrB",
+});
+
 new Vue({
   router,
   render: h => h(App)

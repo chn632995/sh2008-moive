@@ -4,7 +4,7 @@
         <!-- 展示数据 -->
         <div class="item" v-for="(item, index) in list" :key="index" @click="goDetail(item.filmId)">
             <div class="left">
-                <img :src="item.poster" />
+                <img v-lazy="item.poster" />
             </div>
             <div class="middle">
                 <div>{{ item.name }}</div>

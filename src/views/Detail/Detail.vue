@@ -2,7 +2,7 @@
     <div>
         <div class="detail">
             <div class="img">
-                <img :src="film.poster" />
+                <img v-lazy="film.poster" />
             </div>
             <div>
                 <div>{{ film.name }}</div>
@@ -13,6 +13,18 @@
                     {{ film.synopsis }}
                 </div>
             </div>
+            <div>
+                <Swiper :key="'actors_' + film.actors.length">
+                    <!-- 循环输出图片信息 -->
+                    <div
+                        v-for="(item, index) in film.actors"
+                        :key="index"
+                        class="swiper-slide"
+                    >
+                        <img v-lazy="item.avatarAddress" alt="" />
+                    </div>
+                </Swiper>
+            </div>
         </div>
     </div>
 </template>
@@ -21,10 +33,11 @@
 import { moiveDetailData } from "@/api/api";
 // 引入moment
 import moment from "moment";
+import Swiper from "@/components/Swiper";
 export default {
     data() {
         return {
-            film: {},
+            film: {actors: []},
         };
     },
     async mounted() {
@@ -37,11 +50,19 @@ export default {
             return moment(value * 1000).format("YYYY-MM-DD");
         },
     },
+    components: {
+        Swiper
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 .detail {
+    .swiper-slide {
+        img {
+            width: 80px;
+        }
+    }
     .img {
         width: 100%;
         height: 260px;
