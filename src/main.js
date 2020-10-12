@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 // axios体验
 // import axios from 'axios'
@@ -24,12 +24,15 @@ Vue.config.productionTip = false
 // );
 
 // 使用懒加载
-import VueLazyLoad from 'vue-lazyload'
+import VueLazyLoad from "vue-lazyload";
 Vue.use(VueLazyLoad, {
     loading: "https://2url.cc/1OwrB",
 });
 
+// 定义事件总线（后续需要使用的）
+Vue.prototype.eventBus = new Vue();
+
 new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+    router,
+    render: (h) => h(App),
+}).$mount("#app");

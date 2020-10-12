@@ -1,23 +1,30 @@
 <template>
-    <div class="list">
+    <div class="list scroll" :style="{ height: height + 'px' }">
         <Loading v-if="loading"></Loading>
         <!-- 展示数据 -->
-        <div class="item" v-for="(item, index) in list" :key="index" @click="goDetail(item.filmId)">
-            <div class="left">
-                <img v-lazy="item.poster" />
-            </div>
-            <div class="middle">
-                <div>{{ item.name }}</div>
-                <div v-if="type == 1">
-                    <span>观众评分 </span>
-                    <span class="grade">{{ item.grade }}</span>
+        <div>
+            <div
+                class="item"
+                v-for="(item, index) in data"
+                :key="index"
+                @click="goDetail(item.filmId)"
+            >
+                <div class="left">
+                    <img v-lazy="item.poster" />
                 </div>
-                <div>主演：{{ item.actors | parseActors }}</div>
-                <div>{{ item.nation }} | {{ item.runtime }}分钟</div>
-            </div>
-            <div class="right">
-                <span v-if="type == 1">购票</span>
-                <span v-else>预购</span>
+                <div class="middle">
+                    <div>{{ item.name }}</div>
+                    <div v-if="type == 1">
+                        <span>观众评分 </span>
+                        <span class="grade">{{ item.grade }}</span>
+                    </div>
+                    <div>主演：{{ item.actors | parseActors }}</div>
+                    <div>{{ item.nation }} | {{ item.runtime }}分钟</div>
+                </div>
+                <div class="right">
+                    <span v-if="type == 1">购票</span>
+                    <span v-else>预购</span>
+                </div>
             </div>
         </div>
     </div>
@@ -26,10 +33,20 @@
 <script>
 // loading导入
 import Loading from "@/components/Loading";
+import BScroll from "better-scroll";
+// 导入请求方法
+import { nowPlayingListData, comingSoonListData } from "@/api/api";
+
 export default {
     data() {
         return {
             loading: true,
+            height: 0,
+            // bs：保存better-scroll的实例结果
+            bs: null,
+            pageNum: 1,
+            flag: true, // 控制是否可以继续加载更多
+            data: [] // 拼数据的
         };
     },
     props: ["list", "type"],
@@ -37,8 +54,10 @@ export default {
         Loading,
     },
     created() {
+        // 当进入页面后需要将父传子的数据list转交给data
+        this.data = this.list
         // 判断数据是否获取到，获取到之后去除loading组件
-        if (this.list.length > 0) {
+        if (this.data.length > 0) {
             this.loading = false;
         } else {
             this.loading = true;
@@ -55,9 +74,52 @@ export default {
         },
     },
     methods: {
-        goDetail: function(filmId){
-            this.$router.push({name: 'detail',params: {filmId}})
-        }
+        goDetail: function(filmId) {
+            this.$router.push({ name: "detail", params: { filmId } });
+        },
+        // 获取数据的方法
+        getData: async function() {
+            if (this.flag) {
+                this.pageNum++;
+                // 获取数据
+                if (this.type == 1) {
+                    // 正在热映
+                    var ret = await nowPlayingListData(this.pageNum);
+                } else {
+                    // 即将上映
+                    var ret = await comingSoonListData(this.pageNum);
+                }
+                // 如果当前请求到的数据数量少于10，则说明后面已经没有数据可以被请求，此时需要将标志设置成false
+                if(ret.data.data.films.length < 10){
+                    this.flag = false
+                }
+                // 将数据处理好新增到列表中去
+                this.data = this.data.concat(ret.data.data.films)
+            }
+        },
+    },
+    mounted() {
+        // 获取可是高度
+        this.height = document.documentElement.clientHeight - 100;
+    },
+    updated() {
+        this.bs = new BScroll(".scroll", {
+            pullUpLoad: true,
+            // 激活下滑的事件监听
+            pullDownRefresh: true,
+            // 默认情况下使用bs后，它会禁止浏览器的点击事件
+            click: true,
+        });
+        this.bs.on("pullingUp", () => {
+            // 获取数据
+            this.getData();
+            this.bs.finishPullUp();
+        });
+        this.bs.on("pullingDown", () => {
+            // 获取数据
+            this.getData();
+            this.bs.finishPullDown();
+        });
     },
 };
 </script>
@@ -126,5 +188,9 @@ export default {
             }
         }
     }
+}
+
+.scroll {
+    overflow: hidden;
 }
 </style>
