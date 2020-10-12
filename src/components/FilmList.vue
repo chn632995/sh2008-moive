@@ -46,7 +46,7 @@ export default {
             bs: null,
             pageNum: 1,
             flag: true, // 控制是否可以继续加载更多
-            data: [] // 拼数据的
+            data: [], // 拼数据的
         };
     },
     props: ["list", "type"],
@@ -55,7 +55,7 @@ export default {
     },
     created() {
         // 当进入页面后需要将父传子的数据list转交给data
-        this.data = this.list
+        this.data = this.list;
         // 判断数据是否获取到，获取到之后去除loading组件
         if (this.data.length > 0) {
             this.loading = false;
@@ -67,9 +67,13 @@ export default {
         // 处理演员的数据，将主演的数据从数组形式转化成字符串形式以便输出
         parseActors: function(value) {
             let actors = "";
-            value.forEach((element) => {
-                actors += element.name + " ";
-            });
+            if (value) {
+                value.forEach((element) => {
+                    actors += element.name + " ";
+                });
+            } else {
+                actors = "暂无主演";
+            }
             return actors;
         },
     },
@@ -90,11 +94,11 @@ export default {
                     var ret = await comingSoonListData(this.pageNum);
                 }
                 // 如果当前请求到的数据数量少于10，则说明后面已经没有数据可以被请求，此时需要将标志设置成false
-                if(ret.data.data.films.length < 10){
-                    this.flag = false
+                if (ret.data.data.films.length < 10) {
+                    this.flag = false;
                 }
                 // 将数据处理好新增到列表中去
-                this.data = this.data.concat(ret.data.data.films)
+                this.data = this.data.concat(ret.data.data.films);
             }
         },
     },
