@@ -1,0 +1,1759 @@
+.router-transition-enter-active {
+    transition: all 0.3s ease;
+}
+
+.router-transition-leave-active {
+    transition: all 0.5s ease;
+}
+
+.router-transition-enter,
+.router-transition-leave-active {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.web-login {
+    font-size: 15px;
+}
+
+.web-login .login-header {
+    height: 44px;
+    width: 100%;
+    top: 0;
+    color: #191a1b;
+    position: relative;
+}
+
+.web-login .login-header .login-title {
+    line-height: 44px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.web-login .login-header .right-text {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    line-height: 44px;
+    top: 0;
+}
+
+.web-login .login-header:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.web-login .logo {
+    margin: 79px auto 40px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.web-login .logo img {
+    height: 60px;
+}
+
+.web-login .login-form {
+    width: 100%;
+    position: relative;
+}
+
+.web-login .login-form .form-group {
+    line-height: 55px;
+    margin: 0 25px;
+    position: relative;
+}
+
+.web-login .login-form .form-group:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.web-login .login-form .input-control {
+    height: 15px;
+    line-height: 15px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 15px;
+    color: #191a1b;
+    border: 0;
+    outline-width: 0;
+}
+
+.web-login .login-form .submit {
+    line-height: 45px;
+    font-size: 16px;
+    margin: 70px 25px 0;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ff5f16;
+    height: 44px;
+    color: #fff;
+    border: none;
+}
+
+.web-login .login-form .submit span {
+    opacity: 0.3;
+}
+
+.web-login .login-form .submit:hover {
+    background-color: #e55513;
+}
+
+.web-login .login-form .canSubmit {
+    opacity: 1;
+    color: #fff;
+}
+
+.web-login .login-form .canSubmit span {
+    opacity: 1;
+}
+
+.web-login .login-form .login-btn {
+    margin-top: 70px;
+}
+
+.web-login .login-form .sm-text-left {
+    margin-top: 21px;
+    margin-left: 25px;
+    float: left;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.web-login .login-form .sm-text-right {
+    margin-top: 21px;
+    margin-right: 25px;
+    float: right;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.web-login .login-form .getSmsCode {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+.web-login .login-form .clear-mobile-btn,
+.web-login .login-form .eye {
+    font-size: 13px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: inline-block;
+}
+
+.web-login .login-form .successIcon {
+    font-size: 21px;
+    position: absolute;
+    top: 1px;
+    left: 53px;
+    display: inline-block;
+    color: #55af3c;
+}
+
+.web-login .login-form .imgCaptcha {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-align: right;
+}
+
+.web-login .login-form .imgCaptcha img {
+    height: 26px;
+}
+
+.web-login .login-form .errorTip {
+    text-align: left;
+    color: #ff5f16;
+    width: 100%;
+    line-height: 11px;
+    margin-left: 25px;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.sms-code {
+    line-height: 30px;
+    width: 90px;
+    text-align: right;
+    float: right;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disable {
+    color: #bdc0c5;
+    font-size: 10px;
+}
+
+.img-captcha {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.img-captcha .img-captcha-layer {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.img-captcha .img-captcha-wrap {
+    height: 184px;
+    width: 280px;
+    margin: auto;
+    margin-top: 30%;
+    border-radius: 3px;
+    position: relative;
+    background: #fff;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-title {
+    font-size: 16px;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-content {
+    height: 50px;
+    margin: 0 15px 25px;
+    border-bottom: 0.5px solid #ededed;
+    background-color: #fff;
+    position: relative;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-content input {
+    height: 22px;
+    margin: 14px 0;
+    width: 100%;
+    font-size: 15px;
+    color: #bdc0c5;
+    border: 0;
+    outline-width: 0;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-content .ic-pic {
+    height: 40px;
+    width: 85px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-op {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+    border-top: 1px solid #ccc;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-op .img-captcha-cancel {
+    width: 49%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.img-captcha .img-captcha-wrap .img-captcha-op .img-captcha-confirm {
+    width: 49%;
+    height: 100%;
+    float: left;
+    color: red;
+}
+
+.vc-alert {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.vc-alert .vc-alert-layer {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.vc-alert .vc-alert-wrap {
+    height: 120px;
+    width: 280px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 3px;
+    position: relative;
+    background: #fff;
+}
+
+.vc-alert .vc-alert-wrap .vc-alert-content {
+    text-align: center;
+    font-size: 15px;
+    padding: 25px 10px;
+}
+
+.vc-alert .vc-alert-wrap .vc-alert-ok {
+    text-align: center;
+    font-size: 15px;
+    padding: 14px 10px;
+    border-top: 0.5px solid #ededed;
+}
+
+.loading {
+    text-align: center;
+}
+
+.loading img {
+    animation: rotate 0.8s infinite linear;
+    -webkit-animation: rotate 0.8s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+    }
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+    font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+button {
+    outline: none;
+}
+
+dd {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.logo {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.tip {
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.error-tip {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #ff5000;
+}
+
+.login-btn {
+    line-height: 45px;
+    font-size: 17px;
+    margin: 20px 25px 0;
+    border-radius: 3px;
+    text-align: center;
+    background: linear-gradient(270deg, #f84166, #f8673f);
+    height: 44px;
+    color: #fff;
+    border: none;
+}
+
+.login-btn span {
+    opacity: 0.3;
+}
+
+.reset-password .height50 {
+    height: 50px;
+}
+
+.reset-password .reset-header {
+    height: 44px;
+    width: 100%;
+    top: 0;
+    color: #191a1b;
+    position: relative;
+}
+
+.reset-password .reset-header .right-text {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    line-height: 44px;
+    top: 0;
+}
+
+.reset-password .logo {
+    margin: 55px auto;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.reset-password .logo img {
+    height: 60px;
+}
+
+.reset-password .rp-row {
+    height: 55px;
+    margin: 0 25px;
+    position: relative;
+}
+
+.reset-password .rp-row input {
+    height: 15px;
+    line-height: 15px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 15px;
+    color: #191a1b;
+    border: 0;
+    outline-width: 0;
+}
+
+.reset-password .rp-row .rp-row-captcha {
+    height: 30px;
+    line-height: 30px;
+    width: 84px;
+    text-align: center;
+    color: #191a1b;
+    float: right;
+    border: 0.5px solid #797d82;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.reset-password .rp-row .rp-submit-btn {
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #ff5f16;
+    color: #fff;
+}
+
+.reset-password .rp-row .rp-submit-btn span {
+    opacity: 0.3;
+}
+
+.reset-password .rp-row .rp-submit-btn.enable {
+    background-color: #ff5f16;
+    color: #fff;
+}
+
+.reset-password .rp-row .rp-submit-btn.enable span {
+    opacity: 1;
+}
+
+.reset-password .rp-row .imgCaptcha {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-align: right;
+}
+
+.reset-password .rp-row .imgCaptcha img {
+    height: 26px;
+}
+
+.reset-password .clearButton {
+    position: absolute;
+    top: 16px;
+    right: 90px;
+    width: 18px;
+    height: 18px;
+}
+
+.reset-password .getSmsCode {
+    font-size: 13px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.reset-password .bottom-line:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.reset-password .errorTip {
+    text-align: left;
+    color: #ff5f16;
+    width: 100%;
+    line-height: 11px;
+    margin-left: 25px;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.reset-password .successIcon {
+    font-size: 21px;
+    position: absolute;
+    top: 10px;
+    left: 75px;
+    display: inline-block;
+    color: #55af3c;
+}
+
+.security-code .height40 {
+    height: 40px;
+}
+
+.security-code .tip-text {
+    margin-top: 110px;
+    text-align: center;
+    font-size: 15px;
+    color: #191a1b;
+    line-height: 15px;
+    height: 15px;
+}
+
+.security-code .tip-text.high {
+    margin-top: 71px;
+}
+
+.security-code .code-input {
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.security-code .imgCaptcha {
+    margin: 20px auto -15px;
+    text-align: center;
+}
+
+.security-code .imgCaptcha img {
+    height: 29px;
+}
+
+.security-code .errTip {
+    text-align: left;
+    color: #ff5f16;
+    margin: 9px auto 0;
+    font-size: 11px;
+}
+
+.security-code .notifyTip {
+    text-align: center;
+    color: #bdc0c5;
+    margin-top: 30px;
+    padding: 0 50px;
+    font-size: 13px;
+}
+
+.security-code .successIcon {
+    text-align: center;
+}
+
+.security-code .successIcon .success {
+    font-size: 33px;
+    color: #55af3c;
+}
+
+.codeInput {
+    position: relative;
+}
+
+.codeInput .input-box {
+    z-index: 1000;
+}
+
+.codeInput .input-sm-box {
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.codeInput .input-sm-box div {
+    border-right: 1px solid #bdc0c5;
+    border-top: 1px solid #bdc0c5;
+    border-bottom: 1px solid #bdc0c5;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+}
+
+.codeInput .focus {
+    border: 1px solid #3b99fc;
+    border-radius: 6px;
+    box-shadow: 0 0 3px 0 #3b99fc;
+}
+
+.codeInput .input-sm-box:first-child div {
+    border-left: 1px solid #bdc0c5;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.codeInput .input-sm-box:last-child div {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.codeInput .box {
+    position: relative;
+    display: inline-block;
+}
+
+.codeInput .invisibleInput {
+    opacity: 0;
+    width: 50px;
+    position: absolute;
+    top: 1px;
+    margin-left: -10000px;
+}
+
+.codeInput .pwdPoint {
+    display: inline;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.delivery-info {
+    background-color: #f4f4f4;
+}
+
+.delivery-info .delivery-header {
+    background-color: #fff;
+    padding: 17px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #131415;
+    margin-bottom: 10px;
+}
+
+.delivery-info .delivery-header label {
+    color: #797d82;
+    margin-right: 7px;
+}
+
+.delivery-info .delivery-header .common {
+    margin-bottom: 3px;
+}
+
+.delivery-info .delivery-detail {
+    background-color: #fff;
+    position: relative;
+}
+
+.delivery-info .delivery-detail .delivery-cover-line-top {
+    position: absolute;
+    width: 6px;
+    height: 36px;
+    top: 0;
+    left: 98px;
+    background-color: #fff;
+}
+
+.delivery-info .delivery-detail .delivery-cover-line-bottom {
+    position: absolute;
+    width: 6px;
+    height: 36px;
+    bottom: 0;
+    left: 98px;
+    background-color: #fff;
+}
+
+.delivery-info .delivery-detail .delivery-item {
+    height: 80px;
+    font-size: 12px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-timeAndDate {
+    color: #797d82;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 100px;
+    padding: 17px 0 17px 17px;
+    border-right: 1px solid #d2d6dc;
+    margin-right: -5px;
+    height: 100%;
+}
+
+.delivery-info
+    .delivery-detail
+    .delivery-item
+    .delivery-timeAndDate
+    .delivery-time {
+    font-size: 13px;
+}
+
+.delivery-info
+    .delivery-detail
+    .delivery-item
+    .delivery-timeAndDate
+    .delivery-date {
+    font-size: 10px;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-fristItem-timeAndDate {
+    color: #191a1b;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 100px;
+    padding: 17px 0 17px 17px;
+    margin-right: -9px;
+    border-right: 1px solid #d2d6dc;
+    height: 100%;
+}
+
+.delivery-info
+    .delivery-detail
+    .delivery-item
+    .delivery-fristItem-timeAndDate
+    .delivery-date {
+    font-size: 11px;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-icon {
+    z-index: 100;
+    height: 9px;
+    min-width: 9px;
+    border-radius: 4px;
+    background-color: #d2d6dc;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-fristItem-icon {
+    z-index: 100;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 17px;
+    min-width: 17px;
+    border-radius: 8px;
+    background-color: rgba(192, 49, 49, 0.2);
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-fristItem-icon div {
+    height: 9px;
+    width: 9px;
+    border-radius: 5px;
+    background-color: #ff5f16;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-message {
+    color: #797d82;
+    border-top: 1px solid #ededed;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-fristItem-message,
+.delivery-info .delivery-detail .delivery-item .delivery-message {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 17px 17px 17px 0;
+    margin-left: 17px;
+    height: 100%;
+    display: inline-block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.delivery-info .delivery-detail .delivery-item .delivery-fristItem-message {
+    color: #191a1b;
+}
+
+.delivery-info a,
+.delivery-info a:focus,
+.delivery-info a:hover {
+    color: #5f7dec;
+}
+
+.bind-mobile {
+    min-height: 100vh;
+    position: relative;
+}
+
+.bind-mobile .logo {
+    padding: 55px 0;
+    text-align: center;
+    height: 170px;
+    line-height: 60px;
+}
+
+.bind-mobile .logo img {
+    height: 60px;
+}
+
+.bind-mobile .agreement {
+    margin: 188px 0 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.bind-mobile .agreement .agreement-text {
+    display: inline;
+    font-size: 13px;
+    color: #797d82;
+}
+
+.bind-mobile .agreement .agreement-text .agreement-link {
+    color: #191a1b;
+}
+
+.bind-mobile .bind-form {
+    width: 100%;
+}
+
+.bind-mobile .bind-form .form-group {
+    line-height: 55px;
+    margin: 0 25px;
+    position: relative;
+}
+
+.bind-mobile .bind-form .form-group:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.bind-mobile .bind-form .form-group .errorTip {
+    color: #ff5f16;
+}
+
+.bind-mobile .bind-form .input-control {
+    border: none;
+    width: 100%;
+    height: 55px;
+    font-size: 15px;
+}
+
+.bind-mobile .bind-form .submit {
+    line-height: 45px;
+    font-size: 16px;
+    margin: 0 25px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ececec;
+    height: 44px;
+    color: hsla(0, 0%, 88%, 0.3);
+    border: none;
+}
+
+.bind-mobile .bind-form .canSubmit {
+    color: #e1e1e1;
+}
+
+.bind-mobile .bind-form .bind-btn {
+    margin-top: 35px;
+    background-color: #ff5f16;
+}
+
+.bind-mobile .bind-form .sm-text-left {
+    margin-top: 18px;
+    margin-left: 25px;
+    float: left;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.bind-mobile .bind-form .sm-text-right {
+    margin-top: 18px;
+    margin-right: 25px;
+    float: right;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.bind-mobile .bind-form .clearButton {
+    position: absolute;
+    top: 16px;
+    right: 90px;
+    width: 18px;
+    height: 18px;
+}
+
+.bind-mobile .bind-form .getSmsCode {
+    font-size: 13px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+
+.bind-mobile .bind-form .eye {
+    font-size: 13px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: inline-block;
+}
+
+.bind-mobile .bind-form .successIcon {
+    font-size: 21px !important;
+    position: absolute;
+    top: 1px;
+    left: 45px;
+    display: inline-block;
+    color: #55af3c;
+}
+
+.bind-mobile .bind-form .successIcon i {
+    font-size: 21px;
+}
+
+.bind-mobile .bind-form .imgCaptcha {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-align: right;
+}
+
+.bind-mobile .bind-form .imgCaptcha img {
+    height: 26px;
+}
+
+.bind-mobile .bind-form .ic-pic {
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+}
+
+body[data-v-377af130],
+button[data-v-377af130],
+input[data-v-377af130],
+select[data-v-377af130],
+table[data-v-377af130],
+textarea[data-v-377af130] {
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+    font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+div[data-v-377af130] {
+    box-sizing: border-box;
+}
+
+a[data-v-377af130],
+a[data-v-377af130]:focus,
+a[data-v-377af130]:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+body[data-v-377af130] {
+    overflow-x: hidden;
+    background-color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a[data-v-377af130],
+button[data-v-377af130] {
+    outline: none;
+}
+
+dd[data-v-377af130] {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.clearfix[data-v-377af130]:after,
+.clearfix[data-v-377af130]:before {
+    content: "";
+    display: table;
+}
+
+.clearfix[data-v-377af130]:after {
+    clear: both;
+}
+
+.clearfix[data-v-377af130] {
+    *zoom: 1;
+}
+
+.bind-mobile[data-v-377af130] {
+    max-width: 640px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.bind-mobile .bind-tip[data-v-377af130] {
+    font-size: 13px;
+    color: #4a4a4a;
+    margin-top: 18px;
+    margin-left: 25px;
+}
+
+.bind-mobile .bind-form[data-v-377af130] {
+    margin-top: 14px;
+    width: 100%;
+}
+
+.bind-mobile .bind-form .form-group[data-v-377af130] {
+    line-height: 44px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.bind-mobile .bind-form .form-group .error-tip[data-v-377af130],
+.bind-mobile .bind-form .form-group .mobile-error-tip[data-v-377af130] {
+    color: #ff5000;
+    line-height: 18px;
+    display: inline-block;
+    position: absolute;
+    font-size: 12px;
+}
+
+.bind-mobile .bind-form .form-group .clean[data-v-377af130] {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    right: 13px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    bottom: 10px;
+}
+
+.bind-mobile .bind-form .form-group .disable[data-v-377af130] {
+    background-color: #cbd2d7;
+    color: #fff;
+}
+
+.bind-mobile .bind-form .input-control[data-v-377af130] {
+    width: calc(100% - 14px);
+    height: 44px;
+    font-size: 15px;
+    background: #f5f5f5;
+    position: relative;
+    border-radius: 4px;
+    border: 0.5px solid #d2d2d2;
+    outline: none;
+    padding-left: 14px;
+}
+
+.bind-mobile .bind-form .submit[data-v-377af130] {
+    line-height: 45px;
+    font-size: 16px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ececec;
+    height: 44px;
+    color: #e1e1e1;
+    border: none;
+}
+
+.bind-mobile .bind-form .canSubmit[data-v-377af130] {
+    color: #fff;
+}
+
+.bind-mobile .bind-form .bind-btn[data-v-377af130] {
+    margin-top: 50px;
+    background: linear-gradient(270deg, #f84166, #f8673f);
+}
+
+.bind-mobile .bind-form .sm-text-left[data-v-377af130] {
+    margin-top: 18px;
+    margin-left: 25px;
+    float: left;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.bind-mobile .bind-form .sm-text-right[data-v-377af130] {
+    margin-top: 18px;
+    margin-right: 25px;
+    float: right;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.bind-mobile .bind-form .getSmsCode[data-v-377af130] {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    background: #3eaee2;
+    text-align: center;
+    color: #fff;
+    height: 46px;
+    width: 140px;
+    line-height: 46px;
+    border-radius: 0 4px 4px 0;
+}
+
+.bind-mobile .bind-form .eye[data-v-377af130] {
+    font-size: 13px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: inline-block;
+}
+
+.bind-mobile .bind-form .successIcon[data-v-377af130] {
+    font-size: 21px !important;
+    position: absolute;
+    top: 1px;
+    left: 53px;
+    display: inline-block;
+    color: #55af3c;
+}
+
+.bind-mobile .bind-form .successIcon i[data-v-377af130] {
+    font-size: 21px;
+}
+
+.bind-mobile .bind-form .imgCaptcha[data-v-377af130] {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-align: right;
+}
+
+.bind-mobile .bind-form .imgCaptcha img[data-v-377af130] {
+    height: 26px;
+}
+
+.bind-mobile .bind-form .ic-pic[data-v-377af130] {
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+}
+
+.refund-exchange-policy {
+    padding-right: 30px;
+}
+
+.refund-exchange-policy ul {
+    list-style: none;
+}
+
+.refund-exchange-policy h3,
+.refund-exchange-policy h5 {
+    margin-bottom: 0;
+}
+
+.refund-exchange-policy h5 {
+    margin-top: 5px;
+}
+
+.refund-exchange-policy p {
+    margin-top: 3px;
+}
+
+.refund-exchange-policy table {
+    border-collapse: collapse;
+}
+
+.refund-exchange-policy td {
+    border: 1px solid #000;
+}
+
+.refund-exchange-policy .exchange-rule {
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font: 12px/1.5 Tahoma, Helvetica, Arial, sans-serif;
+    font-family: Microsoft YaHei, Tahoma, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+button {
+    outline: none;
+}
+
+dd {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.web-sign-up {
+    font-size: 15px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.web-sign-up .signup-header {
+    height: 44px;
+    width: 100%;
+    top: 0;
+    color: #191a1b;
+    position: relative;
+}
+
+.web-sign-up .signup-header:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.web-sign-up .signup-header .signup-title {
+    line-height: 44px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 17px;
+}
+
+.web-sign-up .signup-header .right-text {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    line-height: 44px;
+    top: 0;
+}
+
+.web-sign-up .logo {
+    margin: 55px auto;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.web-sign-up .logo img {
+    height: 60px;
+}
+
+.web-sign-up .agreement {
+    margin: 124px 0 30px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.web-sign-up .agreement .agreement-text {
+    display: inline;
+    font-size: 13px;
+    color: #797d82;
+}
+
+.web-sign-up .agreement .agreement-text .agreement-link {
+    color: #191a1b;
+}
+
+.web-sign-up .signup-form {
+    width: 100%;
+}
+
+.web-sign-up .signup-form .form-group {
+    line-height: 55px;
+    margin: 0 25px;
+    position: relative;
+}
+
+.web-sign-up .signup-form .form-group:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ededed;
+    transform-origin: 0 0;
+    border-bottom: 1px solid #ededed;
+    transform: scaleY(0.5);
+}
+
+.web-sign-up .signup-form .input-control {
+    height: 15px;
+    line-height: 15px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 15px;
+    color: #191a1b;
+    border: 0;
+    outline-width: 0;
+}
+
+.web-sign-up .signup-form .submit {
+    line-height: 45px;
+    font-size: 16px;
+    margin: 70px 25px 0;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ff5f16;
+    height: 44px;
+    color: #fff;
+    border: none;
+}
+
+.web-sign-up .signup-form .submit span {
+    opacity: 0.3;
+}
+
+.web-sign-up .signup-form .canSubmit {
+    opacity: 1;
+    color: #fff;
+}
+
+.web-sign-up .signup-form .canSubmit span {
+    opacity: 1;
+}
+
+.web-sign-up .signup-form .sm-text-left {
+    margin-top: 18px;
+    margin-left: 25px;
+    float: left;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.web-sign-up .signup-form .sm-text-right {
+    margin-top: 18px;
+    margin-right: 25px;
+    float: right;
+    color: #797d82;
+    font-size: 13px;
+}
+
+.web-sign-up .signup-form .clearButton {
+    position: absolute;
+    top: 16px;
+    right: 90px;
+    width: 18px;
+    height: 18px;
+}
+
+.web-sign-up .signup-form .getSmsCode {
+    font-size: 13px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.web-sign-up .signup-form .eye {
+    font-size: 13px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: inline-block;
+}
+
+.web-sign-up .signup-form .successIcon {
+    font-size: 17px;
+    position: absolute;
+    top: 1px;
+    left: 45px;
+    display: inline-block;
+    color: #55af3c;
+}
+
+.web-sign-up .signup-form .imgCaptcha {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-align: right;
+}
+
+.web-sign-up .signup-form .imgCaptcha img {
+    height: 26px;
+}
+
+.web-sign-up .signup-form .errorTip {
+    text-align: left;
+    color: #ff5f16;
+    width: 100%;
+    line-height: 11px;
+    margin-left: 25px;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+
+.iconfont {
+    font-family: iconfont !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yanjing:before {
+    content: "\E656";
+}
+
+.icon-shouye_shipin:before {
+    content: "\E635";
+}
+
+.icon-shouye_sousuo:before {
+    content: "\E637";
+}
+
+.icon-shouye_shuiguo:before {
+    content: "\E638";
+}
+
+.icon-shouye_xihu:before {
+    content: "\E639";
+}
+
+.icon-shouye_sanjiao:before {
+    content: "\E63D";
+}
+
+.icon-shouye_canchu:before {
+    content: "\E63E";
+}
+
+.icon-shouye_chongzhi:before {
+    content: "\E640";
+}
+
+.icon-tab_shouye:before {
+    content: "\E641";
+}
+
+.icon-tab_gouwuche:before {
+    content: "\E642";
+}
+
+.icon-tab_wode:before {
+    content: "\E643";
+}
+
+.icon-tab_dianying:before {
+    content: "\E644";
+}
+
+.icon-shouye_tushu:before {
+    content: "\E64C";
+}
+
+.icon-wode_kefu:before {
+    content: "\E64D";
+}
+
+.icon-wode_dizhi:before {
+    content: "\E64E";
+}
+
+.icon-wode_shezhi:before {
+    content: "\E64F";
+}
+
+.icon-wode_lipinqia:before {
+    content: "\E650";
+}
+
+.icon-quanju_liebiaojiantou:before {
+    content: "\E651";
+}
+
+.icon-gouwuche_xuanzeqi_jianhao:before {
+    content: "\E652";
+}
+
+.icon-gouwuche_xuanzeqi_jiahao:before {
+    content: "\E653";
+}
+
+.icon-quanju_fanhui:before {
+    content: "\E654";
+}
+
+.icon-tubiaoguifan:before {
+    content: "\E675";
+}
+
+.icon-shangxiang-zhuye:before {
+    content: "\E676";
+}
+
+.icon-denglu-logo:before {
+    content: "\E680";
+}
+
+.icon-shouye_jujia:before {
+    content: "\E64B";
+}
+
+.icon-sudayouxuan:before {
+    content: "\E655";
+}
+
+.icon-biyan:before {
+    content: "\E68B";
+}
+
+.icon-tongxunlu:before {
+    content: "\E68C";
+}
+
+.icon-dianjitongxunlu:before {
+    content: "\E68D";
+}
+
+.icon-dizhi-shanchu:before {
+    content: "\E68E";
+}
+
+.icon-dizhi-bianji:before {
+    content: "\E68F";
+}
+
+.icon-shangxiang-jia:before {
+    content: "\E690";
+}
+
+.icon-shangxiang-jian:before {
+    content: "\E691";
+}
+
+.icon-chongzhi-qingchu:before {
+    content: "\E692";
+}
+
+.icon-shangxiang-xiangyoutiaozhuanxiangqing:before {
+    content: "\E693";
+}
+
+.icon-dingdan-dengdaifukuan:before {
+    content: "\E61D";
+}
+
+.icon-dingdan-yifahuo:before {
+    content: "\E61E";
+}
+
+.icon-dingdan-dizhidingwei:before {
+    content: "\E61F";
+}
+
+.icon-dingdan-yiquxiao:before {
+    content: "\E620";
+}
+
+.icon-quanju-buzhichituikuan:before {
+    content: "\E621";
+}
+
+.icon-quanju-zhifuxuanzhongtai:before {
+    content: "\E622";
+}
+
+.icon-dingdan-daifahuo:before {
+    content: "\E623";
+}
+
+.icon-saoyisao-erweimachaxun:before {
+    content: "\E624";
+}
+
+.icon-dingdan-zhifuhuitiaochenggong:before {
+    content: "\E625";
+}
+
+.icon-quanju-zhifuweixuanzhongtai:before {
+    content: "\E626";
+}
+
+.icon-saoyisao-guanbianniu:before {
+    content: "\E627";
+}
+
+.icon-saoyisao-shuruqiami:before {
+    content: "\E628";
+}
+
+.icon-shangpinjiesuan-anquanmimadanchuangguanbi:before {
+    content: "\E629";
+}
+
+.icon-shangpinjiesuan-lianxiyingyuan:before {
+    content: "\E62A";
+}
+
+.icon-shangpinjiesuan-qupiaoguzhang:before {
+    content: "\E62B";
+}
+
+.icon-sousuo-paixujiantoushang:before {
+    content: "\E62C";
+}
+
+.icon-shangpinjiesuan-wangjimima:before {
+    content: "\E62D";
+}
+
+.icon-sousuo-paixujiantouxia:before {
+    content: "\E62E";
+}
+
+.icon-sousuo-sousuofangdajing:before {
+    content: "\E62F";
+}
+
+.icon-chongzhi-HOT:before {
+    content: "\E694";
+}
+
+body {
+    overflow: hidden;
+}

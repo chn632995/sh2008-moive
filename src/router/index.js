@@ -10,6 +10,7 @@ import filmRouter from './routes/film'
 import detailRouter from "./routes/detail";
 import cityRouter from "./routes/city";
 import vuexRouter from "./routes/vuex";
+import authRouter from "./routes/auth";
 
 const routes = [
     {
@@ -23,6 +24,8 @@ const routes = [
     detailRouter,
     cityRouter,
     vuexRouter,
+    // 注册路由
+    ...authRouter,
 ];
 
 const router = new VueRouter({
