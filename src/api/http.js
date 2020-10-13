@@ -15,11 +15,14 @@ axios.interceptors.request.use(
         if (info == "info") {
             host = "mall.film-ticket.film.info";
         }
+        if (info == "city") {
+            host = "mall.film-ticket.city.list";
+        }
         // .....后续如果有其他的数据请求需求，就接着写
         config.headers = {
             "X-Client-Info":
                 '{"a":"3000","ch":"1002","v":"5.0.4","e":"16006566672048699400193","bc":"110100"}',
-            "X-Host": host
+            "X-Host": host,
         };
         return config;
     },
@@ -29,4 +32,4 @@ axios.interceptors.request.use(
 );
 
 // 导出封装好的axios供后续使用
-export default axios
+export default axios;

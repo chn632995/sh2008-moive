@@ -8,4 +8,7 @@ export const comingSoonListUri =
 // 电影详情数据
 export const moiveDetailUrl = "gateway?k=5950600&filmId=";
 
+// 城市列表数据
+export const cityListUrl = "gateway?k=3233761";
+
 // 后续有其他地址请求届时再加
