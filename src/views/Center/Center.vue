@@ -139,7 +139,7 @@ export default {
 .center-view .avatar {
     text-align: center;
     margin-top: -44px;
-    height: 200px;
+    height: 140px;
     padding-left: 22px;
     padding-top: 64px;
     background: url(https://assets.maizuo.com/h5/v5/public/app/img/bg.6837f67.png);
