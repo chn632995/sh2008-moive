@@ -32,7 +32,11 @@ Vue.use(VueLazyLoad, {
 // 定义事件总线（后续需要使用的）
 Vue.prototype.eventBus = new Vue();
 
+// 导入vuex的store对象
+import store from '@/store/vuex'
+
 new Vue({
     router,
+    store,
     render: (h) => h(App),
 }).$mount("#app");

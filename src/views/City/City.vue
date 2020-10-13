@@ -45,6 +45,9 @@ export default {
     methods: {
         chooseCity: function(cityName) {
             console.log(cityName);
+            // 将数据写到vuex中
+            this.$store.commit('setCity',cityName)
+            this.$router.go(-1)
         },
     },
 };
