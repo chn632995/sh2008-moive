@@ -73,13 +73,13 @@ export const userLogin = (data) => {
 // 获取用户个人信息
 export const userInfo = (_token) => {
     http.defaults.headers.authorization = _token;
-    http.interceptors.response.use(function(response){
-        response.data.user_info.gender = response.data.user_info.gender
-            ? "女"
-            : "男";
-        return response
-    },function(error){
-        // 错误的处理
-    });
+    // http.interceptors.response.use(function(response){
+    //     response.data.user_info.gender = response.data.user_info.gender
+    //         ? "女"
+    //         : "男";
+    //     return response
+    // },function(error){
+    //     // 错误的处理
+    // });
     return http.get(centerUrl);
 };
