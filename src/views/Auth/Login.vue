@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import { userLogin } from "@/api/api";
 export default {
     data() {
         return {
@@ -82,9 +83,18 @@ export default {
     },
     methods: {
         submitForm: function(formName) {
-            this.$refs[formName].validate((valid) => {
+            this.$refs[formName].validate(async (valid) => {
                 if (valid) {
                     // 获取用户名和密码进行提交（API）
+                    let ret = await userLogin(this.formData);
+                    if (ret.data.code == 1000) {
+                        // 登录成功（存储token、跳转）
+                        this.$store.commit("updateToken", ret.data.data._token);
+                        this.$router.push({ path: "/center" });
+                    } else {
+                        // 登录失败
+                        alert(ret.data.info);
+                    }
                 }
             });
         },
@@ -94,7 +104,7 @@ export default {
 
 <style lang="scss" scoped>
 .login {
-    padding-top: 80px; 
+    padding-top: 80px;
     .el-container {
         width: 80%;
         margin-left: 40px;

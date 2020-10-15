@@ -19,11 +19,17 @@ axios.interceptors.request.use(
             host = "mall.film-ticket.city.list";
         }
         // .....后续如果有其他的数据请求需求，就接着写
-        config.headers = {
-            "X-Client-Info":
-                '{"a":"3000","ch":"1002","v":"5.0.4","e":"16006566672048699400193","bc":"110100"}',
-            "X-Host": host,
-        };
+        if (config.headers.authorization) {
+            config.headers = {
+                authorization: config.headers.authorization,
+            };
+        } else {
+            config.headers = {
+                "X-Client-Info":
+                    '{"a":"3000","ch":"1002","v":"5.0.4","e":"16006566672048699400193","bc":"110100"}',
+                "X-Host": host,
+            };
+        }
         return config;
     },
     function(err) {

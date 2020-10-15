@@ -11,6 +11,7 @@ export default new Vuex.Store({
         count: 0,
         city: "地球",
         // 如果有更多的数据需存储记这些就完了
+        _token: "",
     },
     mutations: {
         add: function(state, step) {
@@ -18,6 +19,10 @@ export default new Vuex.Store({
         },
         setCity: function(state, cityName) {
             state.city = cityName;
+        },
+        updateToken: function(state, _token) {
+            state._token = _token;
+            localStorage.setItem("_token", _token);
         },
         // ....
     },
