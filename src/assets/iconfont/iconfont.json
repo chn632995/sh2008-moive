@@ -1,0 +1,37 @@
+{
+  "id": "2047865",
+  "name": "movie",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "悟尘电影",
+  "glyphs": [
+    {
+      "icon_id": "7336825",
+      "name": "资讯",
+      "font_class": "zixun",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "1473243",
+      "name": "电影",
+      "font_class": "dianying",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "11372734",
+      "name": "影院",
+      "font_class": "yingyuan",
+      "unicode": "e8c0",
+      "unicode_decimal": 59584
+    },
+    {
+      "icon_id": "13769961",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}
